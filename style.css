@@ -1,0 +1,36 @@
+body {
+ background-color: black;
+ overflow: hidden; /* Hide scrollbars */
+ margin: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh; /* Occupy the full viewport height */
+ font-family: sans-serif;
+ color: white;
+}
+
+
+#gameCanvas {
+ background-color: #222;
+}
+
+
+#ui {
+ position: absolute;
+ top: 10px;
+ left: 10px;
+ color: white;
+ font-size: 16px;
+}
+
+
+#gameover {
+ font-size: 30px;
+ color: red;
+ text-align: center;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
