@@ -1,5 +1,5 @@
- -- [PREVIEW_SIZE:800x600]
- -- Love2D Lua Code for "IT KNOWS YOU'RE HERE"
+-- [PREVIEW_SIZE:800x600]
+ -- Love2D Lua Code for "IT KNOWS YOU'RE HERE" - Black and Blood Red Color Scheme
  
 
  -- Game setup
@@ -37,7 +37,7 @@
  -- Load assets
  function love.load()
   love.window.setTitle("IT KNOWS YOU'RE HERE")
-  monsterImage = love.graphics.newImage("monster.png")
+  monsterImage = love.graphics.newImage("New Piskel (7).gif") -- Changed filename here
   -- Example: "monster.png" should be a creepy image.
  end
  
@@ -120,22 +120,22 @@
  
 
   -- Draw hallway
-  love.graphics.setColor(50, 50, 50) -- Dark hallway color
+  love.graphics.setColor(0, 0, 0) -- Black hallway color
   love.graphics.rectangle("fill", 0, 0, screenWidth, screenHeight)
  
 
   -- Draw player's light
-  love.graphics.setColor(255, 255, 150, 80) -- Soft yellow light
+  love.graphics.setColor(255, 0, 0, 80) -- Blood red light
   love.graphics.circle("fill", player.x, player.y, playerLightRadius)
  
 
   -- Draw player
-  love.graphics.setColor(100, 150, 255)
+  love.graphics.setColor(200, 0, 0) -- Darker Red for player
   love.graphics.rectangle("fill", player.x - player.width / 2, player.y - player.height / 2, player.width, player.height)
  
 
   -- Draw monster with scaling
-  love.graphics.setColor(255, 255, 255) -- Reset color
+  love.graphics.setColor(255, 255, 255) -- Use original image color
   local monsterWidth = monster.width * monsterScale
   local monsterHeight = monster.height * monsterScale
   love.graphics.draw(monsterImage, monster.x - monsterWidth / 2, monster.y - monsterHeight / 2, 0, monsterScale, monsterScale, monster.width / 2, monster.height / 2) -- Centered drawing
@@ -146,7 +146,7 @@
 
   -- Game over message
   if gameover then
-  love.graphics.setColor(255, 0, 0)
+  love.graphics.setColor(255, 0, 0) -- Blood Red
   love.graphics.printf(message, 0, screenHeight / 2 - 20, screenWidth, "center")
   end
  end
